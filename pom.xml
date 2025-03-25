@@ -13,5 +13,41 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+<dependencies>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.21.0</version>
+    </dependency>
 
+    <!--Cucumber Java (features/stepdefs)-->
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-java</artifactId>
+        <version>7.15.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!--Junit 5 (Integração reportportal, SurefireReports) mvn test-->
+    <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit5-engine</artifactId>
+        <version>5.0.0-ALPHA</version>
+    </dependency>
+
+    <!--Junit Cucumber (Runner)-->
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <version>7.15.0</version>
+    </dependency>
+
+    <!--Cucumber DataTable (Scenario Outline with paremeters)-->
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>datatable</artifactId>
+        <version>7.15.0</version>
+        <scope>compile</scope>
+    </dependency>
+</dependencies>
 </project>
