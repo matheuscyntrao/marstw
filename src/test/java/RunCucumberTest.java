@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"pretty", "summary", "com.epam.reportportal.cucumber.ScenarioReporter"},
+        plugin = {"pretty", "summary"},
         features = ".",
         glue={"."},
         tags= "@basic-test"
