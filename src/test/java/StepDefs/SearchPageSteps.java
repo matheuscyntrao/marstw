@@ -6,6 +6,7 @@ import MarsAir.Tasks.SearchTasks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
 public class SearchPageSteps {
@@ -32,5 +33,16 @@ public class SearchPageSteps {
         searchTasks.doSearch(departure, returnDate, promotionalCode);
     }
 
+    @When("the user select trips for the next two years")
+    public void theUserSelectTripsForTheNextTwoYears() {
+        ExplicityWait.waitUntilElementIsVisible(Driver.instance, 10, By.id("departure"));
+        SearchTasks searchTasks = new SearchTasks(Driver.instance);
+        searchTasks.doSearch("July", "December (two years from now)", "");
+    }
 
+    @Then("the user should be able so search")
+    public void theUserShouldBeAbleSoSearch() {
+        ExplicityWait.waitUntilElementIsVisible(Driver.instance, 10, By.partialLinkText("Back"));
+        Assert.assertTrue(Driver.instance.findElement(By.partialLinkText("Back")).isDisplayed());
+    }
 }
