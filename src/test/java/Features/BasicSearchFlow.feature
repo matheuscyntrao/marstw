@@ -20,6 +20,8 @@ Feature: Basic Search Flow
     And the user search for flights "<departure>" "<return>" "<promotionalCode>"
     Then the message must be "<message>"
 
+    #TODO: Change the message according to documentation
+
     Examples:
       | departure                     | return                        | promotionalCode | message |
       | July                          | July                          |                 | false   |
