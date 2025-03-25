@@ -1,8 +1,31 @@
-As a MarsAir Sales Director (Mark)
-I want potential customers to be able to go back to the flight search from anywhere on the site
-So that they are guided towards booking trips
+Feature: Go back to the flight search from anywhere on the site
 
-Acceptance criteria
-“Book a ticket to the red planet now!” should apperar somewhere prominent on the page.
-Clicking it takes the user to the home page.
-Clicking the MarsAir logo on the top left should also take the user to the home page.
+  Scenario: “Book a ticket to the red planet now!” should apperar somewhere prominent on the page.
+
+    Given the user is accessing the home page
+    When the page load completely
+    Then the page must have the text "Book a ticket to the red planet now!"
+    And should appear somewhere prominent on the page (?)
+    # need more description to check that
+
+  Scenario: Clicking it takes the user to the home page.
+
+    Given the user is accessing the home page
+    When the page load completely
+    And the user click at visible text "Book a ticket to the red planet now!"
+    Then the user must be redirect to the home page
+
+  Scenario: Clicking the MarsAir logo
+
+
+    Given the user is accessing the home page
+    When the page load completely
+    And the user click at MarsAir logo
+    Then the user must be redirect to the home page
+
+
+  Scenario: Position os MarsAir logo
+
+    Given the user is accessing the home page
+    When the page load completely
+    Then the logo must be at the left-top side of the website
