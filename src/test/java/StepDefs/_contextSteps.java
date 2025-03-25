@@ -28,7 +28,7 @@ public class _contextSteps {
     public void tearDown() {
         if(!(Driver.instance == null))
         {
-            //Driver.instance.quit();
+            Driver.instance.quit();
         }
     }
 
