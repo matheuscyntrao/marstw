@@ -1,3 +1,4 @@
+@promotional-code @ready
 Feature: Promotional Code
 
   Scenario: Promotional code valid format

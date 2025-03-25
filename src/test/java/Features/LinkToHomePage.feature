@@ -1,3 +1,4 @@
+@homepage-links @ready
 Feature: Go back to the flight search from anywhere on the site
 
   Scenario: “Book a ticket to the red planet now!” should apperar somewhere prominent on the page.

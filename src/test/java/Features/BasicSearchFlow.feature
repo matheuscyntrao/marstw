@@ -1,3 +1,4 @@
+@basic-test @ready
 Feature: Basic Search Flow
 
   Scenario: There should be a departure field on the search form

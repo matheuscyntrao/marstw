@@ -1,3 +1,4 @@
+@invalid-dates @ready
 Feature: Impossible schedule
 
   Scenario: Return date less than 1 years from departure
