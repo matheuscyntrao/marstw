@@ -23,30 +23,23 @@ public class SearchPage {
     @FindBy(xpath = "//*[@id=\"content\"]/form/dl[4]/dd/input")
     private WebElement buttonSearch;
 
-    Select selDeparture, selReturn;
-    TextField promocode;
-    Button btnSearch;
-
     public SearchPage() {
-        this.promocode = new TextField(textfieldPromotionalCode);
-        this.selDeparture = new Select(selectDeparture);
-        this.selReturn = new Select(selectReturn);
-        this.btnSearch = new Button(buttonSearch);
+
     }
 
     public Select getSelDeparture() {
-        return selDeparture;
+        return new Select(selectDeparture);
     }
 
     public Select getSelReturn() {
-        return selReturn;
+        return new Select(selectReturn);
     }
 
     public TextField getPromocode() {
-        return promocode;
+        return new TextField(textfieldPromotionalCode);
     }
 
     public Button getBtnSearch() {
-        return btnSearch;
+        return new Button(buttonSearch);
     }
 }

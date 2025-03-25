@@ -24,48 +24,43 @@ Feature: Basic Search Flow
     #TODO: Change the message according to documentation
 
     Examples:
-      | departure | return | promotionalCode | message |
-      | July         | July      |                 | false   |
-   #  | July                          | December                      |                 | true    |
-   #  | July                          | July (next year)              |                 | true    |
-   #  | July                          | December (next year)          |                 | true    |
-   #  | July                          | July (two years from now)     |                 | true    |
-   #  | July                          | December (two years from now) |                 | true    |
-
-   #  | December                      | July                          |                 | false   |
-   #  | December                      | December                      |                 | false   |
-   #  | December                      | July (next year)              |                 | true    |
-   #  | December                      | December (next year)          |                 | true    |
-   #  | December                      | July (two years from now)     |                 | true    |
-   #  | December                      | December (two years from now) |                 | true    |
-
-   #  | July (next year)              | July                          |                 | false   |
-   #  | July (next year)              | December                      |                 | false   |
-   #  | July (next year)              | July (next year)              |                 | false   |
-   #  | July (next year)              | December (next year)          |                 | true    |
-   #  | July (next year)              | July (two years from now)     |                 | true    |
-   #  | July (next year)              | December (two years from now) |                 | true    |
-
-   #  | December (next year)          | July                          |                 | false   |
-   #  | December (next year)          | December                      |                 | false   |
-   #  | December (next year)          | July (next year)              |                 | false   |
-   #  | December (next year)          | December (next year)          |                 | false   |
-   #  | December (next year)          | July (two years from now)     |                 | true    |
-   #  | December (next year)          | December (two years from now) |                 | true    |
-
-   #  | July (two years from now)     | July                          |                 | false   |
-   #  | July (two years from now)     | December                      |                 | false   |
-   #  | July (two years from now)     | July (next year)              |                 | false   |
-   #  | July (two years from now)     | December (next year)          |                 | false   |
-   #  | July (two years from now)     | July (two years from now)     |                 | false   |
-   #  | July (two years from now)     | December (two years from now) |                 | true    |
-
-   #  | December (two years from now) | July                          |                 | false   |
-   #  | December (two years from now) | December                      |                 | false   |
-   #  | December (two years from now) | July (next year)              |                 | false   |
-   #  | December (two years from now) | December (next year)          |                 | false   |
-   #  | December (two years from now) | July (two years from now)     |                 | false   |
-   #  | December (two years from now) | December (two years from now) |                 | false   |
+      | departure                     | return                        | promotionalCode | message                                   |
+      | July                          | July                          |                 | false                                     |
+      | July                          | December                      |                 | Seats available!                          |
+      | July                          | July (next year)              |                 | Seats available!                          |
+      | July                          | December (next year)          |                 | Seats available!                          |
+      | July                          | July (two years from now)     |                 | Seats available!                          |
+      | July                          | December (two years from now) |                 | Seats available!                          |
+      | December                      | July                          |                 | Sorry, there are no more seats available. |
+      | December                      | December                      |                 | Sorry, there are no more seats available. |
+      | December                      | July (next year)              |                 | Seats available!                          |
+      | December                      | December (next year)          |                 | Seats available!                          |
+      | December                      | July (two years from now)     |                 | Seats available!                          |
+      | December                      | December (two years from now) |                 | Seats available!                          |
+      | July (next year)              | July                          |                 | Sorry, there are no more seats available. |
+      | July (next year)              | December                      |                 | Sorry, there are no more seats available. |
+      | July (next year)              | July (next year)              |                 | Sorry, there are no more seats available. |
+      | July (next year)              | December (next year)          |                 | Seats available!                          |
+      | July (next year)              | July (two years from now)     |                 | Seats available!                          |
+      | July (next year)              | December (two years from now) |                 | Seats available!                          |
+      | December (next year)          | July                          |                 | Sorry, there are no more seats available. |
+      | December (next year)          | December                      |                 | Sorry, there are no more seats available. |
+      | December (next year)          | July (next year)              |                 | Sorry, there are no more seats available. |
+      | December (next year)          | December (next year)          |                 | Sorry, there are no more seats available. |
+      | December (next year)          | July (two years from now)     |                 | Seats available!                          |
+      | December (next year)          | December (two years from now) |                 | Seats available!                          |
+      | July (two years from now)     | July                          |                 | Sorry, there are no more seats available. |
+      | July (two years from now)     | December                      |                 | Sorry, there are no more seats available. |
+      | July (two years from now)     | July (next year)              |                 | Sorry, there are no more seats available. |
+      | July (two years from now)     | December (next year)          |                 | Sorry, there are no more seats available. |
+      | July (two years from now)     | July (two years from now)     |                 | Sorry, there are no more seats available. |
+      | July (two years from now)     | December (two years from now) |                 | true                                      |
+      | December (two years from now) | July                          |                 | Sorry, there are no more seats available. |
+      | December (two years from now) | December                      |                 | Sorry, there are no more seats available. |
+      | December (two years from now) | July (next year)              |                 | Sorry, there are no more seats available. |
+      | December (two years from now) | December (next year)          |                 | Sorry, there are no more seats available. |
+      | December (two years from now) | July (two years from now)     |                 | Sorry, there are no more seats available. |
+      | December (two years from now) | December (two years from now) |                 | Sorry, there are no more seats available. |
 
 
   Scenario: Trips for the next two years should be searchable.
