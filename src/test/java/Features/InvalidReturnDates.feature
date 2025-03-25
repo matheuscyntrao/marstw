@@ -1,6 +1,11 @@
-As a MarsAir Sales Director (Mark)
-I want to prevent potential customers from searching for invalid trips
-So that they don’t waste time, and book valid ones
+Feature: Impossible schedule
 
-Acceptance criteria
-“Unfortunately, this schedule is not possible. Please try again.” displayed when return date is less than 1 year from the departure.
+  Scenario: Return date less than 1 years from departure
+
+  Scenario: Flights leave every six months, in July and December, both ways.
+
+    Given the user is searching a flight
+    And the user select July
+    And the user select December
+    When the user search for seats
+    Then the message must be “Unfortunately, this schedule is not possible. Please try again.”

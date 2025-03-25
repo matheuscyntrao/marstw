@@ -76,11 +76,11 @@ Feature: Basic Search Flow
     Given the user is at the search page
     And seats are available
     When the user complete the search
-    Then the message “Seats available! Call 0800 MARSAIR to book!” must be present
+    Then the message must be “Seats available! Call 0800 MARSAIR to book!”
 g
   Scenario: If there are no seats, display “Sorry, there are no more seats available.”
 
     Given the user is at the search page
     And seats are not available
     When the user complete the search
-    Then the message “Sorry, there are no more seats available.” must be present
+    Then the message must be “Sorry, there are no more seats available.”
