@@ -5,20 +5,29 @@ Feature: Promotional Code
 
     Given the user is accessing the home page
     When he fill the promotional code field with <promocode>
-    Then the message shoud be "Promotional code [code] used: [discount]% discount!"
+    Then the message shoud be "Promotional code [code] used: <discount>% discount!"
 
     Examples:
-      | scenario | promocode   | functional result
-      | 00%      | 0PG-OSU-628 | pass but make sense 00% of discount? |
-      | 10%      | JK1-CJC-247 | pass                                 |
-      | 20%      |  AA2-AAA-114 | pass                             |
-      | 30%      | AF3-FJK-418 | pass                                 |
-      | 40%      | AF3-FJK-418 | pass                                 |
+      | discount | promocode   |
+      | 00%      | 0PG-OSU-628 |
+      | 10%      | JK1-CJC-247 |
+      | 20%      | AA2-AAA-114 |
+      | 30%      | AA3-AAA-126 |
+      | 40%      | AA4-AAA-318 |
+      | 50%      | AA5-AAA-117 |
+      | 60%      | AA6-AAA-118 |
+      | 70%      | AA7-AAA-007 |
+      | 80%      | AA8-AAA-008 |
+      | 90%      | AA9-AAA-009 |
 
 
-
-  Scenario: Promotional code invalid format
+  Scenario Outline: Promotional code invalid format
 
     Given the user is accessing the home page
-    When he fill the promotional code field with ""
+    When he fill the promotional code field with <promocode>
     Then the message must be "Sorry, code [invalid promo code] is not valid"g
+
+    Examples:
+      | scenario                           | promocode   |
+      | Bug when promocode sum ends with 8 | 0PG-OSU-628 |
+      | Invalid code                       | AAA-AAA-AAA |
