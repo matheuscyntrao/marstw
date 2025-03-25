@@ -2,5 +2,4 @@
 2 - Label do campo "Return" está "Returning"
 3 - Não sei se o ambiente é blue green environment (monta na hora), mas se realizo o teste após 1 hora, o style.css estoura um 500 Internal Server Error no Network console.
 4 - 00% de desconto não faz sentido
-5 - Descontos de 20% e 30% não estão funcionais utilizando a mesma regra para criação dos mais
-6 - Quando o ultimo dígito verificador dá 8, ele sempre aplica 00% de desconto, ignorando o dígito que seria o 'primary'
+5 - Quando o ultimo dígito verificador dá 8, ele sempre aplica 00% de desconto, ignorando o dígito que seria o 'primary'
