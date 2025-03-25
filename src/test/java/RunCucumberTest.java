@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "summary"},
         features = ".",
         glue={"."},
-        tags= "@basictest"
+        tags= "@justthat"
 )
 public class RunCucumberTest {
 

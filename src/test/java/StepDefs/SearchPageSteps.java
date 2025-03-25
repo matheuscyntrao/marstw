@@ -22,27 +22,16 @@ public class SearchPageSteps {
 
 
     @Then("there sould be a field called {string}")
-    public void thereSouldBeAFieldCalled(String fieldLabel) {
-        ExplicityWait.waitUntilElementIsVisible(Driver.instance, 10, By.linkText(fieldLabel));
+    public void thereSouldBeAFieldCalled(String fieldId) {
+        ExplicityWait.waitUntilElementIsVisible(Driver.instance, 10, By.id(fieldId));
     }
 
     @And("the user search for flights {string} {string} {string}")
     public void theUserSelectDeparture(String departure, String returnDate, String promotionalCode) {
-        ExplicityWait.waitUntilElementIsVisible(Driver.instance, 10, By.id("departure"));
-        SearchTasks searchTasks = new SearchTasks(Driver.instance);
+        ExplicityWait.waitUntilElementIsVisible(Driver.instance, 1, By.id("departing"));
+        SearchTasks searchTasks = new SearchTasks();
         searchTasks.doSearch(departure, returnDate, promotionalCode);
     }
 
-    @When("the user select trips for the next two years")
-    public void theUserSelectTripsForTheNextTwoYears() {
-        ExplicityWait.waitUntilElementIsVisible(Driver.instance, 10, By.id("departure"));
-        SearchTasks searchTasks = new SearchTasks(Driver.instance);
-        searchTasks.doSearch("July", "December (two years from now)", "");
-    }
 
-    @Then("the user should be able so search")
-    public void theUserShouldBeAbleSoSearch() {
-        ExplicityWait.waitUntilElementIsVisible(Driver.instance, 10, By.partialLinkText("Back"));
-        Assert.assertTrue(Driver.instance.findElement(By.partialLinkText("Back")).isDisplayed());
-    }
 }

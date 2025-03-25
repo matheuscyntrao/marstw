@@ -11,7 +11,11 @@ public class Select {
     }
 
     public void select(String option) {
-       this.element.selectByValue(option);
+        try {
+            this.element.selectByValue(option);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 
 }

@@ -1,5 +1,6 @@
 package MarsAir.Pages;
 
+import Framework.Driver;
 import Framework.Elements.Button;
 import Framework.Elements.Select;
 import Framework.Elements.TextField;
@@ -10,30 +11,26 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SearchPage {
 
-    WebDriver driver;
+    @FindBy(id = "departing")
+    private WebElement selectDeparture;
 
-    @FindBy(id = "departure")
-    WebElement selectDeparture;
-
-    @FindBy(id = "return")
-    WebElement selectReturn;
+    @FindBy(id = "returning")
+    private WebElement selectReturn;
 
     @FindBy(id = "promotional_code")
-    WebElement textfieldPromotionalCode;
+    private WebElement textfieldPromotionalCode;
 
     @FindBy(xpath = "//*[@id=\"content\"]/form/dl[4]/dd/input")
-    WebElement buttonSearch;
+    private WebElement buttonSearch;
 
     Select selDeparture, selReturn;
-    TextField txtPromotionalCode;
+    TextField promocode;
     Button btnSearch;
 
-    public SearchPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(this.driver, SearchPage.class);
+    public SearchPage() {
+        this.promocode = new TextField(textfieldPromotionalCode);
         this.selDeparture = new Select(selectDeparture);
         this.selReturn = new Select(selectReturn);
-        this.txtPromotionalCode = new TextField(textfieldPromotionalCode);
         this.btnSearch = new Button(buttonSearch);
     }
 
@@ -45,12 +42,11 @@ public class SearchPage {
         return selReturn;
     }
 
-    public TextField getTxtPromotionalCode() {
-        return txtPromotionalCode;
+    public TextField getPromocode() {
+        return promocode;
     }
 
     public Button getBtnSearch() {
         return btnSearch;
     }
-
 }

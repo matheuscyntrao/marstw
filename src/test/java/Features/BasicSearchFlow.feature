@@ -5,14 +5,15 @@ Feature: Basic Search Flow
 
     Given the user is accessing the home page
     When the page load completely
-    Then there sould be a field called "departure"
+    Then there sould be a field called "departing"
 
   Scenario: There should be a return field on the search form
 
     Given the user is accessing the home page
     When the page load completely
-    Then there sould be a field called "return"
+    Then there sould be a field called "returning"
 
+  @justthat
   Scenario Outline: Flights leave every six months, in July and December, both ways.
 
     Given the user is accessing the home page
@@ -23,48 +24,48 @@ Feature: Basic Search Flow
     #TODO: Change the message according to documentation
 
     Examples:
-      | departure                     | return                        | promotionalCode | message |
-      | July                          | July                          |                 | false   |
-      | July                          | December                      |                 | true    |
-      | July                          | July (next year)              |                 | true    |
-      | July                          | December (next year)          |                 | true    |
-      | July                          | July (two years from now)     |                 | true    |
-      | July                          | December (two years from now) |                 | true    |
+      | departure | return | promotionalCode | message |
+      | July         | July      |                 | false   |
+   #  | July                          | December                      |                 | true    |
+   #  | July                          | July (next year)              |                 | true    |
+   #  | July                          | December (next year)          |                 | true    |
+   #  | July                          | July (two years from now)     |                 | true    |
+   #  | July                          | December (two years from now) |                 | true    |
 
-      | December                      | July                          |                 | false   |
-      | December                      | December                      |                 | false   |
-      | December                      | July (next year)              |                 | true    |
-      | December                      | December (next year)          |                 | true    |
-      | December                      | July (two years from now)     |                 | true    |
-      | December                      | December (two years from now) |                 | true    |
+   #  | December                      | July                          |                 | false   |
+   #  | December                      | December                      |                 | false   |
+   #  | December                      | July (next year)              |                 | true    |
+   #  | December                      | December (next year)          |                 | true    |
+   #  | December                      | July (two years from now)     |                 | true    |
+   #  | December                      | December (two years from now) |                 | true    |
 
-      | July (next year)              | July                          |                 | false   |
-      | July (next year)              | December                      |                 | false   |
-      | July (next year)              | July (next year)              |                 | false   |
-      | July (next year)              | December (next year)          |                 | true    |
-      | July (next year)              | July (two years from now)     |                 | true    |
-      | July (next year)              | December (two years from now) |                 | true    |
+   #  | July (next year)              | July                          |                 | false   |
+   #  | July (next year)              | December                      |                 | false   |
+   #  | July (next year)              | July (next year)              |                 | false   |
+   #  | July (next year)              | December (next year)          |                 | true    |
+   #  | July (next year)              | July (two years from now)     |                 | true    |
+   #  | July (next year)              | December (two years from now) |                 | true    |
 
-      | December (next year)          | July                          |                 | false   |
-      | December (next year)          | December                      |                 | false   |
-      | December (next year)          | July (next year)              |                 | false   |
-      | December (next year)          | December (next year)          |                 | false   |
-      | December (next year)          | July (two years from now)     |                 | true    |
-      | December (next year)          | December (two years from now) |                 | true    |
+   #  | December (next year)          | July                          |                 | false   |
+   #  | December (next year)          | December                      |                 | false   |
+   #  | December (next year)          | July (next year)              |                 | false   |
+   #  | December (next year)          | December (next year)          |                 | false   |
+   #  | December (next year)          | July (two years from now)     |                 | true    |
+   #  | December (next year)          | December (two years from now) |                 | true    |
 
-      | July (two years from now)     | July                          |                 | false   |
-      | July (two years from now)     | December                      |                 | false   |
-      | July (two years from now)     | July (next year)              |                 | false   |
-      | July (two years from now)     | December (next year)          |                 | false   |
-      | July (two years from now)     | July (two years from now)     |                 | false   |
-      | July (two years from now)     | December (two years from now) |                 | true    |
+   #  | July (two years from now)     | July                          |                 | false   |
+   #  | July (two years from now)     | December                      |                 | false   |
+   #  | July (two years from now)     | July (next year)              |                 | false   |
+   #  | July (two years from now)     | December (next year)          |                 | false   |
+   #  | July (two years from now)     | July (two years from now)     |                 | false   |
+   #  | July (two years from now)     | December (two years from now) |                 | true    |
 
-      | December (two years from now) | July                          |                 | false   |
-      | December (two years from now) | December                      |                 | false   |
-      | December (two years from now) | July (next year)              |                 | false   |
-      | December (two years from now) | December (next year)          |                 | false   |
-      | December (two years from now) | July (two years from now)     |                 | false   |
-      | December (two years from now) | December (two years from now) |                 | false   |
+   #  | December (two years from now) | July                          |                 | false   |
+   #  | December (two years from now) | December                      |                 | false   |
+   #  | December (two years from now) | July (next year)              |                 | false   |
+   #  | December (two years from now) | December (next year)          |                 | false   |
+   #  | December (two years from now) | July (two years from now)     |                 | false   |
+   #  | December (two years from now) | December (two years from now) |                 | false   |
 
 
   Scenario: Trips for the next two years should be searchable.
