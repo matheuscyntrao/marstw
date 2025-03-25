@@ -22,47 +22,47 @@ Feature: Basic Search Flow
 
     Examples:
       | departure                     | return                        | promotionalCode | message |
-      | July                          | July                          | promotionalCode | false   |
-      | July                          | December                      | promotionalCode | true    |
-      | July                          | July (next year)              | promotionalCode | true    |
-      | July                          | December (next year)          | promotionalCode | true    |
-      | July                          | July (two years from now)     | promotionalCode | true    |
-      | July                          | December (two years from now) | promotionalCode | true    |
+      | July                          | July                          |                 | false   |
+      | July                          | December                      |                 | true    |
+      | July                          | July (next year)              |                 | true    |
+      | July                          | December (next year)          |                 | true    |
+      | July                          | July (two years from now)     |                 | true    |
+      | July                          | December (two years from now) |                 | true    |
 
-      | December                      | July                          | promotionalCode | false   |
-      | December                      | December                      | promotionalCode | false   |
-      | December                      | July (next year)              | promotionalCode | true    |
-      | December                      | December (next year)          | promotionalCode | true    |
-      | December                      | July (two years from now)     | promotionalCode | true    |
-      | December                      | December (two years from now) | promotionalCode | true    |
+      | December                      | July                          |                 | false   |
+      | December                      | December                      |                 | false   |
+      | December                      | July (next year)              |                 | true    |
+      | December                      | December (next year)          |                 | true    |
+      | December                      | July (two years from now)     |                 | true    |
+      | December                      | December (two years from now) |                 | true    |
 
-      | July (next year)              | July                          | promotionalCode | false   |
-      | July (next year)              | December                      | promotionalCode | false   |
-      | July (next year)              | July (next year)              | promotionalCode | false   |
-      | July (next year)              | December (next year)          | promotionalCode | true    |
-      | July (next year)              | July (two years from now)     | promotionalCode | true    |
-      | July (next year)              | December (two years from now) | promotionalCode | true    |
+      | July (next year)              | July                          |                 | false   |
+      | July (next year)              | December                      |                 | false   |
+      | July (next year)              | July (next year)              |                 | false   |
+      | July (next year)              | December (next year)          |                 | true    |
+      | July (next year)              | July (two years from now)     |                 | true    |
+      | July (next year)              | December (two years from now) |                 | true    |
 
-      | December (next year)          | July                          | promotionalCode | false   |
-      | December (next year)          | December                      | promotionalCode | false   |
-      | December (next year)          | July (next year)              | promotionalCode | false   |
-      | December (next year)          | December (next year)          | promotionalCode | false   |
-      | December (next year)          | July (two years from now)     | promotionalCode | true    |
-      | December (next year)          | December (two years from now) | promotionalCode | true    |
+      | December (next year)          | July                          |                 | false   |
+      | December (next year)          | December                      |                 | false   |
+      | December (next year)          | July (next year)              |                 | false   |
+      | December (next year)          | December (next year)          |                 | false   |
+      | December (next year)          | July (two years from now)     |                 | true    |
+      | December (next year)          | December (two years from now) |                 | true    |
 
-      | July (two years from now)     | July                          | promotionalCode | false   |
-      | July (two years from now)     | December                      | promotionalCode | false   |
-      | July (two years from now)     | July (next year)              | promotionalCode | false   |
-      | July (two years from now)     | December (next year)          | promotionalCode | false   |
-      | July (two years from now)     | July (two years from now)     | promotionalCode | false   |
-      | July (two years from now)     | December (two years from now) | promotionalCode | true    |
+      | July (two years from now)     | July                          |                 | false   |
+      | July (two years from now)     | December                      |                 | false   |
+      | July (two years from now)     | July (next year)              |                 | false   |
+      | July (two years from now)     | December (next year)          |                 | false   |
+      | July (two years from now)     | July (two years from now)     |                 | false   |
+      | July (two years from now)     | December (two years from now) |                 | true    |
 
-      | December (two years from now) | July                          | promotionalCode | false   |
-      | December (two years from now) | December                      | promotionalCode | false   |
-      | December (two years from now) | July (next year)              | promotionalCode | false   |
-      | December (two years from now) | December (next year)          | promotionalCode | false   |
-      | December (two years from now) | July (two years from now)     | promotionalCode | false   |
-      | December (two years from now) | December (two years from now) | promotionalCode | false   |
+      | December (two years from now) | July                          |                 | false   |
+      | December (two years from now) | December                      |                 | false   |
+      | December (two years from now) | July (next year)              |                 | false   |
+      | December (two years from now) | December (next year)          |                 | false   |
+      | December (two years from now) | July (two years from now)     |                 | false   |
+      | December (two years from now) | December (two years from now) |                 | false   |
 
 
   Scenario: Trips for the next two years should be searchable.
