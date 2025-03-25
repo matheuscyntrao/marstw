@@ -3,7 +3,10 @@ package StepDefs;
 import Framework.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -28,5 +31,6 @@ public class _contextSteps {
             Driver.instance.quit();
         }
     }
+
 
 }
