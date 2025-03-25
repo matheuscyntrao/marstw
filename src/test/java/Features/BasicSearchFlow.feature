@@ -15,7 +15,7 @@ Feature: Basic Search Flow
 
   Scenario Outline: Flights leave every six months, in July and December, both ways.
 
-    Given the user is searching a flight
+    Given the user is accessing the home page
     And the user select <departure>
     And the user select <return>
     When the user search for seats
@@ -68,20 +68,21 @@ Feature: Basic Search Flow
 
   Scenario: Trips for the next two years should be searchable.
 
-    Given the user is at the search page
+    Given the user is accessing the home page
     When the user select trips for the next two years
     Then the user should be able so search
 
   Scenario: If there are seats, display “Seats available! Call 0800 MARSAIR to book!”
 
-    Given the user is at the search page
+    Given the user is accessing the home page
     And seats are available
     When the user complete the search
     Then the message must be “Seats available! Call 0800 MARSAIR to book!”
-g
+  g
+
   Scenario: If there are no seats, display “Sorry, there are no more seats available.”
 
-    Given the user is at the search page
+    Given the user is accessing the home page
     And seats are not available
     When the user complete the search
     Then the message must be “Sorry, there are no more seats available.”

@@ -5,7 +5,7 @@ Feature: Impossible schedule
 
   Scenario: Flights leave every six months, in July and December, both ways.
 
-    Given the user is searching a flight
+    Given the user is accessing the home page
     And the user select July
     And the user select December
     When the user search for seats
