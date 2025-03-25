@@ -24,7 +24,7 @@ Feature: Go back to the flight search from anywhere on the site
     Then the user must be redirect to the home page
 
 
-  Scenario: Position os MarsAir logo
+  Scenario: Position of MarsAir logo
 
     Given the user is accessing the home page
     When the page load completely
