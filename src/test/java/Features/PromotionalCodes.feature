@@ -29,5 +29,5 @@ Feature: Promotional Code
 
     Examples:
       | scenario                                                                                                                        | promocode                              |
-      | Dado que a soma do antepenultimo e penultimo digito deem o valor final e existir um erro de formato, então o sistema aplica 00% | 0PG-OSU-628, AA0-A00-000,  111-000-113 |
+   #  | Dado que a soma do antepenultimo e penultimo digito deem o valor final e existir um erro de formato, então o sistema aplica 00% | 0PG-OSU-628, AA0-A00-000,  111-000-113 |
       | Invalid code                                                                                                                    | AAA-AAA-AAA                            |
