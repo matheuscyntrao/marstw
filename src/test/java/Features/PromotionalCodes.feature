@@ -28,6 +28,6 @@ Feature: Promotional Code
     Then the message must be "Sorry, code [invalid promo code] is not valid"g
 
     Examples:
-      | scenario                           | promocode   |
-      | Bug when promocode sum ends with 8 | 0PG-OSU-628 |
-      | Invalid code                       | AAA-AAA-AAA |
+      | scenario                                                                                                                        | promocode   |
+      | Dado que a soma do antepenultimo e penultimo digito deem o valor final e existir um erro de formato, então o sistema aplica 00% | 0PG-OSU-628 |
+      | Invalid code                                                                                                                    | AAA-AAA-AAA |
