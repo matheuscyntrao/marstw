@@ -22,45 +22,43 @@ Feature: Basic Search Flow
     Then the message must be "<message>"
 
     #TODO: Change the message according to documentation
-
     Examples:
-      | departure                     | return                        | promotionalCode | message                                   |
-      | July                          | July                          |                 | false                                     |
-      | July                          | December                      |                 | Seats available!                          |
-      | July                          | July (next year)              |                 | Seats available!                          |
-      | July                          | December (next year)          |                 | Seats available!                          |
-      | July                          | July (two years from now)     |                 | Seats available!                          |
-      | July                          | December (two years from now) |                 | Seats available!                          |
-      | December                      | July                          |                 | Sorry, there are no more seats available. |
-      | December                      | December                      |                 | Sorry, there are no more seats available. |
-      | December                      | July (next year)              |                 | Seats available!                          |
-      | December                      | December (next year)          |                 | Seats available!                          |
-      | December                      | July (two years from now)     |                 | Seats available!                          |
-      | December                      | December (two years from now) |                 | Seats available!                          |
-      | July (next year)              | July                          |                 | Sorry, there are no more seats available. |
-      | July (next year)              | December                      |                 | Sorry, there are no more seats available. |
-      | July (next year)              | July (next year)              |                 | Sorry, there are no more seats available. |
-      | July (next year)              | December (next year)          |                 | Seats available!                          |
-      | July (next year)              | July (two years from now)     |                 | Seats available!                          |
-      | July (next year)              | December (two years from now) |                 | Seats available!                          |
-      | December (next year)          | July                          |                 | Sorry, there are no more seats available. |
-      | December (next year)          | December                      |                 | Sorry, there are no more seats available. |
-      | December (next year)          | July (next year)              |                 | Sorry, there are no more seats available. |
-      | December (next year)          | December (next year)          |                 | Sorry, there are no more seats available. |
-      | December (next year)          | July (two years from now)     |                 | Seats available!                          |
-      | December (next year)          | December (two years from now) |                 | Seats available!                          |
-      | July (two years from now)     | July                          |                 | Sorry, there are no more seats available. |
-      | July (two years from now)     | December                      |                 | Sorry, there are no more seats available. |
-      | July (two years from now)     | July (next year)              |                 | Sorry, there are no more seats available. |
-      | July (two years from now)     | December (next year)          |                 | Sorry, there are no more seats available. |
-      | July (two years from now)     | July (two years from now)     |                 | Sorry, there are no more seats available. |
-      | July (two years from now)     | December (two years from now) |                 | true                                      |
-      | December (two years from now) | July                          |                 | Sorry, there are no more seats available. |
-      | December (two years from now) | December                      |                 | Sorry, there are no more seats available. |
-      | December (two years from now) | July (next year)              |                 | Sorry, there are no more seats available. |
-      | December (two years from now) | December (next year)          |                 | Sorry, there are no more seats available. |
-      | December (two years from now) | July (two years from now)     |                 | Sorry, there are no more seats available. |
-      | December (two years from now) | December (two years from now) |                 | Sorry, there are no more seats available. |
+      | departure | return | promotionalCode | message                                   |
+      | 0         | 0      |                 | Seats available!                          |
+      | 0         | 1      |                 | Seats available!                          |
+      | 0         | 2      |                 | Seats available!                          |
+      | 0         | 3      |                 | Seats available!                          |
+      | 0         | 4      |                 | Seats available!                          |
+      | 0         | 5      |                 | Sorry, there are no more seats available. |
+      | 1         | 0      |                 | Sorry, there are no more seats available. |
+      | 1         | 1      |                 | Seats available!                          |
+      | 1         | 2      |                 | Seats available!                          |
+      | 1         | 3      |                 | Seats available!                          |
+      | 1         | 4      |                 | Seats available!                          |
+      | 1         | 5      |                 | Sorry, there are no more seats available. |
+      | 2         | 0      |                 | Sorry, there are no more seats available. |
+      | 2         | 1      |                 | Sorry, there are no more seats available. |
+      | 2         | 2      |                 | Seats available!                          |
+      | 2         | 3      |                 | Seats available!                          |
+      | 2         | 4      |                 | Seats available!                          |
+      | 2         | 5      |                 | Sorry, there are no more seats available. |
+      | 3         | 0      |                 | Sorry, there are no more seats available. |
+      | 3         | 1      |                 | Sorry, there are no more seats available. |
+      | 3         | 2      |                 | Sorry, there are no more seats available. |
+      | 3         | 3      |                 | Seats available!                          |
+      | 3         | 4      |                 | Seats available!                          |
+      | 3         | 5      |                 | Sorry, there are no more seats available. |
+      | 4         | 0      |                 | Sorry, there are no more seats available. |
+      | 4         | 1      |                 | Sorry, there are no more seats available. |
+      | 4         | 2      |                 | Sorry, there are no more seats available. |
+      | 4         | 3      |                 | Sorry, there are no more seats available. |
+      | 4         | 4      |                 | true                                      |
+      | 4         | 5      |                 | Sorry, there are no more seats available. |
+      | 5         | 0      |                 | Sorry, there are no more seats available. |
+      | 5         | 1      |                 | Sorry, there are no more seats available. |
+      | 5         | 2      |                 | Sorry, there are no more seats available. |
+      | 5         | 3      |                 | Sorry, there are no more seats available. |
+      | 5         | 4      |                 | Sorry, there are no more seats available. |
 
 
   Scenario: Trips for the next two years should be searchable.

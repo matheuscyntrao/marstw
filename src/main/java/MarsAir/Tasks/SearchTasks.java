@@ -2,7 +2,6 @@ package MarsAir.Tasks;
 
 import Framework.Driver;
 import MarsAir.Pages.SearchPage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class SearchTasks {
@@ -16,6 +15,7 @@ public class SearchTasks {
     public void doSearch(String departure, String returnDate, String promotionalCode) {
         this.searchPage.getSelDeparture().select(departure);
         this.searchPage.getSelReturn().select(returnDate);
+        this.searchPage.getPromocode().sendKeys("");
         this.searchPage.getBtnSearch().click();
     }
 

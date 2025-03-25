@@ -1,13 +1,10 @@
 package MarsAir.Pages;
 
-import Framework.Driver;
 import Framework.Elements.Button;
 import Framework.Elements.Select;
 import Framework.Elements.TextField;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class SearchPage {
 

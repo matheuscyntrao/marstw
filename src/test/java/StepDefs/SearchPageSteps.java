@@ -28,7 +28,7 @@ public class SearchPageSteps {
 
     @And("the user search for flights {string} {string} {string}")
     public void theUserSelectDeparture(String departure, String returnDate, String promotionalCode) {
-        ExplicityWait.waitUntilElementIsVisible(Driver.instance, 1, By.id("departing"));
+        ExplicityWait.waitUntilElementIsVisible(Driver.instance, 10, By.id("content"));
         SearchTasks searchTasks = new SearchTasks();
         searchTasks.doSearch(departure, returnDate, promotionalCode);
     }
